@@ -21,6 +21,10 @@
     <!-- <script type="text/javascript" src="//s1.hdslb.com/bfs/seed/jinkela/header/header.js"></script> -->
 
     <style type="text/css">
+        .top {
+            margin-top: 0;
+        }
+
         @media screen and (orientation: portrait) {
             * {
                 margin: 0 auto;
@@ -573,13 +577,16 @@
             }
         }
 
+        .bili-search {
+
+            margin-top: 300px;
+        }
 
         /*# sourceMappingURL=search.0.94115f1175732897c38d29de25c9c6b240821d37.css.map*/
 
         body {
             margin: 0;
             padding: 0;
-            margin-top: 300px;
             font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
         }
     </style>
@@ -588,20 +595,22 @@
 <body>
     <!---->
     <!---->
-    </div>
     <script>
         function GTB() {
             input = document.getElementById("text").value;
             window.location.href = "https://search.bilibili.com/all?keyword=" + input;
         }
     </script>
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span id="busuanzi_container_site_pv">
-        本站总访问量<span id="busuanzi_value_site_pv"></span>次
-    </span>
-    <span id="busuanzi_container_site_uv">
-        本站访客数<span id="busuanzi_value_site_uv"></span>人次
-    </span>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+    </script>
+    <div>
+        <span id="busuanzi_container_site_pv" class="top">
+            本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span>
+        <span id="busuanzi_container_site_uv" class="top">
+            本站访客数<span id="busuanzi_value_site_uv"></span>人次
+        </span>
+    </div>
     <div id="server-search-app" class="bili-search">
         <div class="home-wrap">
             <div class="home-form">
