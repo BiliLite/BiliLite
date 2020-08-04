@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)https://search.bilibili.com/ -->
+<html class="js-focus-visible">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title data-vue-meta="true">BiliLite</title>
+    <meta data-vue-meta="true" http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta data-vue-meta="true" name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta data-vue-meta="true" name="description" content="BiliLite是由Xiaozeze127开发的网站，简洁的界面使人不受推荐的诱惑">
+    <meta data-vue-meta="true" name="keywords"
+        content="B站,弹幕,字幕,AMV,MAD,MTV,ANIME,动漫,动漫音乐,游戏,游戏解说,ACG,galgame,动画,番组,新番,初音,洛天依,vocaloid">
+    <meta name="spm_prefix" content="333.337">
+    <link rel="dns-prefetch" href="https://s1.hdslb.com/">
+    <link rel="dns-prefetch" href="https://i0.hdslb.com/">
+    <link rel="dns-prefetch" href="https://i1.hdslb.com/">
+    <link rel="dns-prefetch" href="https://i2.hdslb.com/">
+    <link rel="dns-prefetch" href="https://static.hdslb.com/">
+    <link rel="shortcut icon" href="https://static.hdslb.com/images/favicon.ico">
+
+    <!-- <script type="text/javascript" src="//s1.hdslb.com/bfs/seed/jinkela/header/header.js"></script> -->
+
+    <style type="text/css">
+        @media screen and (orientation: portrait) {
+            * {
+                margin: 0 auto;
+                padding: 0;
+            }
+
+            html {
+                background-color: #fff;
+                font: 12px Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif
+            }
+
+            body,
+            dd,
+            dl,
+            form,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p {
+                margin: 0
+            }
+
+            li,
+            ol,
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none
+            }
+
+            a {
+                text-decoration: none;
+                outline: 0;
+                color: #00a1d6;
+                cursor: pointer
+            }
+
+
+            fieldset,
+            img {
+                border: none;
+                vertical-align: middle
+            }
+
+            .hide {
+                display: none
+            }
+
+            i {
+                display: inline-block
+            }
+
+
+
+            #bili-search .nav-search-box,
+            #bili-search .search-icon {
+                display: none !important;
+            }
+
+            #bili-search .b-footer-wrap {
+                max-width: 1160px
+            }
+
+            .suggest-wrap .vt-text {
+                height: 32px;
+                display: block;
+                line-height: 32px;
+                font-size: 14px;
+                position: relative;
+                text-align: left;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                cursor: pointer;
+                color: #222;
+                padding: 0 20px;
+                margin: 0 0 4px
+            }
+
+            .suggest-wrap .horizontal .hz-text:hover {
+                border-color: #00a1d6;
+                color: #00a1d6
+            }
+
+            .suggest-wrap .title {
+                border-top: 1px solid #e5e9ef;
+                height: 10px;
+                line-height: 10px;
+                margin: 0 20px
+            }
+
+            .suggest-wrap .title span {
+                display: inline-block;
+                font-size: 12px;
+                color: #99a2aa;
+                padding: 0 10px;
+                text-align: center;
+                background: #fff;
+                position: relative;
+                top: -6px
+            }
+
+            .suggest-wrap .history-wrap {
+                margin-top: 20px;
+                position: relative;
+                padding-bottom: 20px
+            }
+
+            .suggest-wrap .history-wrap .history-li {
+                position: relative;
+                margin: 0
+            }
+
+            .suggest-wrap .history-wrap .history-li .clear {
+                position: absolute;
+                right: 20px;
+                top: 10px;
+                background-image: url(//s1.hdslb.com/bfs/static/jinkela/search/asserts/sprite-690be8a6ea.png);
+                background-position: -485px -41px;
+                width: 12px;
+                height: 12px;
+                cursor: pointer
+            }
+
+            .suggest-wrap .history-wrap .clearall {
+                position: absolute;
+                bottom: 0;
+                right: 20px;
+                font-size: 12px;
+                color: #00a1d6
+            }
+
+            .suggest-wrap .keyword-wrap .keyword {
+                padding: 0 20px;
+                color: #222
+            }
+
+            .suggest-wrap .keyword-wrap .keyword .suggest_high_light {
+                color: #f25d8e
+            }
+
+            .suggest-wrap .keyword-wrap .keyword.focus {
+                background: #e5e9ef
+            }
+
+            .suggest-wrap .clearall {
+                position: absolute;
+                bottom: 0;
+                right: 20px;
+                font-size: 12px;
+                color: #00a1d6
+            }
+
+            .home-wrap {
+                width: 980px;
+                margin: 0 auto
+            }
+
+            .home-wrap .home-logo {
+                text-align: center;
+                margin: 40px auto 50px;
+                width: 284px;
+                height: 68px;
+                background: transparent url(//s1.hdslb.com/bfs/static/jinkela/search/asserts/search_index_logo_v2.4.png) no-repeat 50%
+            }
+
+            .home-wrap .home-input {
+                width: 632px;
+                margin: 0 auto 15px;
+                position: relative
+            }
+
+            .home-wrap .home-input .default {
+                display: inline-block;
+                text-align: center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                vertical-align: top;
+                cursor: pointer
+            }
+
+            .home-wrap .home-input .type {
+                width: 100px;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 4px 0 0 4px;
+                text-align: center;
+                float: left;
+                border: 1px solid #ccd0d7;
+                transition: border .1s linear;
+                vertical-align: middle;
+                background-color: #fff;
+                cursor: pointer;
+                padding: 0 7px
+            }
+
+            .home-wrap .home-input .type .arrow-down {
+                margin-left: 5px
+            }
+
+            .home-wrap .home-input .type.selected,
+            .home-wrap .home-input .type:hover {
+                border: 1px solid #aaa;
+                background-image: linear-gradient(0deg, #f8f8f8, #fff);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, .16)
+            }
+
+            .home-wrap .home-input .list {
+                position: absolute;
+                background: #fff;
+                border: 1px solid #ccd0d7;
+                border-top: 0;
+                z-index: 5000;
+                border-radius: 0 0 4px 4px;
+                top: 40px
+            }
+
+            .home-wrap .home-input .list li {
+                cursor: pointer;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 114px;
+                text-align: center;
+                height: 40px;
+                line-height: 40px
+            }
+
+            .home-wrap .home-input .content {
+                float: left;
+                margin-left: 35px;
+                border: 1px solid #ddd;
+                border-left: 0;
+                border-right: 0;
+                padding: 0 10px;
+                height: 40px;
+                color: #222;
+                width: 374px
+            }
+
+            .home-wrap .home-input .content::-ms-clear {
+                display: none
+            }
+
+            .home-wrap .home-input .searchBtn {
+                float: left;
+                text-align: center;
+                line-height: 40px;
+                font-size: 16px;
+                font-weight: bolder;
+                background-color: #00a1d6;
+                color: #fff;
+                border: 1px solid #008cd2;
+                width: 120px;
+                height: 40px;
+                border-radius: 0 4px 4px 0
+            }
+
+            .home-wrap .home-input .searchBtn:hover {
+                background-color: #00b5e5
+            }
+
+            .home-wrap .home-tips .tips-link .search-icons {
+                background: transparent url(//s1.hdslb.com/bfs/static/jinkela/search/asserts/search_icon.png) no-repeat 50%;
+                width: 24px;
+                height: 24px;
+                vertical-align: middle;
+                display: inline-block
+            }
+
+
+        }
+
+        @media screen and (orientation: landscape) {
+            * {
+                margin: 0 auto;
+                padding: 0;
+            }
+
+            html {
+                background-color: #fff;
+                font: 12px Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif
+            }
+
+            body,
+            dd,
+            dl,
+            form,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p {
+                margin: 0
+            }
+
+            li,
+            ol,
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none
+            }
+
+            a {
+                text-decoration: none;
+                outline: 0;
+                color: #00a1d6;
+                cursor: pointer
+            }
+
+
+            fieldset,
+            img {
+                border: none;
+                vertical-align: middle
+            }
+
+            .hide {
+                display: none
+            }
+
+            i {
+                display: inline-block
+            }
+
+
+
+            #bili-search .nav-search-box,
+            #bili-search .search-icon {
+                display: none !important;
+            }
+
+            #bili-search .b-footer-wrap {
+                max-width: 1160px
+            }
+
+            .suggest-wrap .vt-text {
+                height: 32px;
+                display: block;
+                line-height: 32px;
+                font-size: 14px;
+                position: relative;
+                text-align: left;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                cursor: pointer;
+                color: #222;
+                padding: 0 20px;
+                margin: 0 0 4px
+            }
+
+            .suggest-wrap .horizontal .hz-text:hover {
+                border-color: #00a1d6;
+                color: #00a1d6
+            }
+
+            .suggest-wrap .title {
+                border-top: 1px solid #e5e9ef;
+                height: 10px;
+                line-height: 10px;
+                margin: 0 20px
+            }
+
+            .suggest-wrap .title span {
+                display: inline-block;
+                font-size: 12px;
+                color: #99a2aa;
+                padding: 0 10px;
+                text-align: center;
+                background: #fff;
+                position: relative;
+                top: -6px
+            }
+
+            .suggest-wrap .history-wrap {
+                margin-top: 20px;
+                position: relative;
+                padding-bottom: 20px
+            }
+
+            .suggest-wrap .history-wrap .history-li {
+                position: relative;
+                margin: 0
+            }
+
+            .suggest-wrap .history-wrap .history-li .clear {
+                position: absolute;
+                right: 20px;
+                top: 10px;
+                background-image: url(//s1.hdslb.com/bfs/static/jinkela/search/asserts/sprite-690be8a6ea.png);
+                background-position: -485px -41px;
+                width: 12px;
+                height: 12px;
+                cursor: pointer
+            }
+
+            .suggest-wrap .history-wrap .clearall {
+                position: absolute;
+                bottom: 0;
+                right: 20px;
+                font-size: 12px;
+                color: #00a1d6
+            }
+
+            .suggest-wrap .keyword-wrap .keyword {
+                padding: 0 20px;
+                color: #222
+            }
+
+            .suggest-wrap .keyword-wrap .keyword .suggest_high_light {
+                color: #f25d8e
+            }
+
+            .suggest-wrap .keyword-wrap .keyword.focus {
+                background: #e5e9ef
+            }
+
+            .suggest-wrap .clearall {
+                position: absolute;
+                bottom: 0;
+                right: 20px;
+                font-size: 12px;
+                color: #00a1d6
+            }
+
+            .home-wrap {
+                width: 980px;
+                margin: 0 auto
+            }
+
+            .home-wrap .home-logo {
+                text-align: center;
+                margin: 40px auto 50px;
+                width: 284px;
+                height: 68px;
+                background: transparent url(//s1.hdslb.com/bfs/static/jinkela/search/asserts/search_index_logo_v2.4.png) no-repeat 50%
+            }
+
+            .home-wrap .home-input {
+                width: 632px;
+                margin: 0 auto 15px;
+                position: relative
+            }
+
+            .home-wrap .home-input .default {
+                display: inline-block;
+                text-align: center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                vertical-align: top;
+                cursor: pointer
+            }
+
+            .home-wrap .home-input .type {
+                width: 100px;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 4px 0 0 4px;
+                text-align: center;
+                float: left;
+                border: 1px solid #ccd0d7;
+                transition: border .1s linear;
+                vertical-align: middle;
+                background-color: #fff;
+                cursor: pointer;
+                padding: 0 7px
+            }
+
+            .home-wrap .home-input .type .arrow-down {
+                margin-left: 5px
+            }
+
+            .home-wrap .home-input .type.selected,
+            .home-wrap .home-input .type:hover {
+                border: 1px solid #aaa;
+                background-image: linear-gradient(0deg, #f8f8f8, #fff);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, .16)
+            }
+
+            .home-wrap .home-input .list {
+                position: absolute;
+                background: #fff;
+                border: 1px solid #ccd0d7;
+                border-top: 0;
+                z-index: 5000;
+                border-radius: 0 0 4px 4px;
+                top: 40px
+            }
+
+            .home-wrap .home-input .list li {
+                cursor: pointer;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 114px;
+                text-align: center;
+                height: 40px;
+                line-height: 40px
+            }
+
+            .home-wrap .home-input .content {
+                float: left;
+                margin-left: 35px;
+                border: 1px solid #ddd;
+                border-left: 0;
+                border-right: 0;
+                padding: 0 10px;
+                height: 40px;
+                color: #222;
+                width: 374px
+            }
+
+            .home-wrap .home-input .content::-ms-clear {
+                display: none
+            }
+
+            .home-wrap .home-input .searchBtn {
+                float: left;
+                text-align: center;
+                line-height: 40px;
+                font-size: 16px;
+                font-weight: bolder;
+                background-color: #00a1d6;
+                color: #fff;
+                border: 1px solid #008cd2;
+                width: 120px;
+                height: 40px;
+                border-radius: 0 4px 4px 0
+            }
+
+            .home-wrap .home-input .searchBtn:hover {
+                background-color: #00b5e5
+            }
+
+            .home-wrap .home-tips .tips-link .search-icons {
+                background: transparent url(//s1.hdslb.com/bfs/static/jinkela/search/asserts/search_icon.png) no-repeat 50%;
+                width: 24px;
+                height: 24px;
+                vertical-align: middle;
+                display: inline-block
+            }
+        }
+
+
+        /*# sourceMappingURL=search.0.94115f1175732897c38d29de25c9c6b240821d37.css.map*/
+
+        body {
+            margin: 0;
+            padding: 0;
+            margin-top: 300px;
+            font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <!---->
+    <!---->
+    </div>
+    <script>
+        function GTB() {
+            input = document.getElementById("text").value;
+            window.location.href = "https://search.bilibili.com/all?keyword=" + input;
+        }
+    </script>
+    <div id="server-search-app" class="bili-search">
+        <div class="home-wrap">
+            <div class="home-form">
+                <div class="home-logo"></div>
+                <div class="home-input clearfix">
+                    <input onkeydown="if(event.keyCode==13) GTB()" class="content" type="text" name="text" id="text"
+                        autofocus="autofocus" placeholder="搜索你想要的内容..." />
+                    <a onclick="GTB()" class="searchBtn" type="button" name="bdyx" id="btn">搜索</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- built files will be auto injected -->
+
+</body>
+
+</html>
