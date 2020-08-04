@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <!-- saved from url=(0028)https://search.bilibili.com/ -->
 <html class="js-focus-visible">
-    <script>
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?d710504b3daa332cd960c0405af4e77c";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?d710504b3daa332cd960c0405af4e77c";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
 <head>
-    
+
 
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -33,7 +34,7 @@
 
     <style type="text/css">
         .top {
-            margin-top: 0;
+            font-size: 15px;
         }
 
         * {
@@ -322,6 +323,16 @@
             padding: 0;
             font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
         }
+
+        #footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            font-size: 20px;
+            /*脚部的高度*/
+            clear: both;
+        }
     </style>
 </head>
 
@@ -336,13 +347,9 @@
     </script>
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
     </script>
-    <div>
-        <span id="busuanzi_container_site_pv" class="top">
-            本站总访问量<span id="busuanzi_value_site_pv"></span>次
-        </span>
-        <span id="busuanzi_container_site_uv" class="top">
-            本站访客数<span id="busuanzi_value_site_uv"></span>人次
-        </span>
+    <div class="top">
+        本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        本站访客数<span id="busuanzi_value_site_uv"></span>人次
     </div>
     <div id="server-search-app" class="bili-search">
         <div class="home-wrap">
@@ -357,6 +364,7 @@
             </div>
         </div>
     </div>
+    <div id="footer">本站开发者：<a href="https://maftert.gitee.io" target="_blank">Xiaozeze127</a></div>
     <!-- built files will be auto injected -->
 
 </body>
